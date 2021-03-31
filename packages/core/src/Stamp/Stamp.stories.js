@@ -51,6 +51,7 @@ export const CustomBackgroundAndBorderColor = () => (
       color='background.lightest'
       bg='primary'
       borderColor='primary'
+      variation={'solid'}
       mr={2}
     >
       custom border and background

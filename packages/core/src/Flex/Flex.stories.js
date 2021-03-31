@@ -7,18 +7,18 @@ export default {
 }
 
 export const Basic = () => (
-  <Flex alignItems='center'>
+  <Text align='center'>
     <Box width={1 / 2} p={3} color='white' bg='blue'>
       Flex
     </Box>
     <Box width={1 / 2} p={1} color='white' bg='green'>
       Box
     </Box>
-  </Flex>
+  </Text>
 )
 
 export const Wrap = () => (
-  <Flex flexWrap='wrap'>
+  <Flex wrap='wrap'>
     <Box width={[1, 1 / 2]} p={3} color='white' bg='blue'>
       Flex
     </Box>

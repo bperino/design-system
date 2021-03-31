@@ -152,6 +152,44 @@ importers:
       styled-components: ^4.4.1
       styled-system: ^4.2.4
       us: ^2.0.0
+  ../../packages/codemods:
+    dependencies:
+      lodash.get: 4.4.2
+      prop-types: 15.7.2
+      styled-system: 4.2.4
+    devDependencies:
+      '@babel/cli': 7.13.14
+      '@priceline/babel-preset': link:../../tools/babel-preset
+      '@priceline/eslint-config': link:../../tools/eslint-config
+      '@rushstack/eslint-patch': 1.0.6
+      cross-env: 7.0.3
+      eslint: 7.23.0
+      jest: 26.6.3
+      jest-standard-reporter: 2.0.0
+      jest-styled-components: 6.3.4_styled-components@4.4.1
+      jscodeshift: 0.11.0
+      npm-run-all: 4.1.5
+      pcln-design-system: link:../core
+      rimraf: 3.0.2
+      styled-components: 4.4.1
+    specifiers:
+      '@babel/cli': ^7.13.10
+      '@priceline/babel-preset': workspace:*
+      '@priceline/eslint-config': workspace:*
+      '@rushstack/eslint-patch': ^1.0.6
+      cross-env: ^7.0.3
+      eslint: ^7.23.0
+      jest: ^26.6.3
+      jest-standard-reporter: ^2.0.0
+      jest-styled-components: ^6.3.4
+      jscodeshift: ^0.11.0
+      lodash.get: ^4.4.2
+      npm-run-all: ^4.1.5
+      pcln-design-system: workspace:*
+      prop-types: ^15.7.2
+      rimraf: ^3.0.2
+      styled-components: ^4.4.1
+      styled-system: ^4.2.4
   ../../packages/core:
     dependencies:
       '@types/styled-system': 4.2.2
@@ -5841,7 +5879,6 @@ packages:
     resolution:
       integrity: sha1-w7M6te42DYbg5ijwRorn7yfWVN8=
   /ansi-regex/3.0.0:
-    dev: true
     engines:
       node: '>=4'
     resolution:
@@ -6331,6 +6368,14 @@ packages:
     dev: true
     resolution:
       integrity: sha512-6jyFLuDmeidKmUEb3NM+/yawG0M2bDZ9Z1qbZP59cyHLz8kYGKYwpJP0UwUKKUiTRNvxfLesJnTedqczP7cTDA==
+  /babel-core/7.0.0-bridge.0_@babel+core@7.13.14:
+    dependencies:
+      '@babel/core': 7.13.14
+    dev: true
+    peerDependencies:
+      '@babel/core': ^7.0.0-0
+    resolution:
+      integrity: sha512-poPX9mZH/5CSanm50Q+1toVci6pv5KSRv/5TWCwtzQS5XEwn40BcCrgIeMFWP9CKKIniKXNxoIOnOq4VVlGXhg==
   /babel-eslint/8.2.6:
     dependencies:
       '@babel/code-frame': 7.0.0-beta.44
@@ -11976,6 +12021,12 @@ packages:
     dev: true
     resolution:
       integrity: sha512-dVsPA/UwQ8+2uoFe5GHtiBMu48dWLTdsuEd7CKGlZlD78r1TTWBvDuFaFGKCo/ZfEr95Uk56vZoX86OsHkUeIg==
+  /flow-parser/0.147.0:
+    dev: true
+    engines:
+      node: '>=0.4.0'
+    resolution:
+      integrity: sha512-z+b/pgp2QLvsWJkzhKXU8yC5TmaNyXGRmHac3x0Swmn9uQESRXhNIJq9TPHKPPeWgFym33OLO+5BlIdy/tXRCQ==
   /flush-write-stream/1.1.1:
     dependencies:
       inherits: 2.0.4
@@ -14045,7 +14096,6 @@ packages:
     resolution:
       integrity: sha1-754xOG8DGn8NZDr4L95QxFfvAMs=
   /is-fullwidth-code-point/2.0.0:
-    dev: true
     engines:
       node: '>=4'
     resolution:
@@ -15018,6 +15068,33 @@ packages:
     dev: true
     resolution:
       integrity: sha1-peZUwuWi3rXyAdls77yoDA7y9RM=
+  /jscodeshift/0.11.0:
+    dependencies:
+      '@babel/core': 7.13.14
+      '@babel/parser': 7.13.13
+      '@babel/plugin-proposal-class-properties': 7.13.0_@babel+core@7.13.14
+      '@babel/plugin-proposal-nullish-coalescing-operator': 7.13.8_@babel+core@7.13.14
+      '@babel/plugin-proposal-optional-chaining': 7.13.12_@babel+core@7.13.14
+      '@babel/plugin-transform-modules-commonjs': 7.13.8_@babel+core@7.13.14
+      '@babel/preset-flow': 7.13.13_@babel+core@7.13.14
+      '@babel/preset-typescript': 7.13.0_@babel+core@7.13.14
+      '@babel/register': 7.13.14_@babel+core@7.13.14
+      babel-core: 7.0.0-bridge.0_@babel+core@7.13.14
+      colors: 1.4.0
+      flow-parser: 0.147.0
+      graceful-fs: 4.2.6
+      micromatch: 3.1.10
+      neo-async: 2.6.2
+      node-dir: 0.1.17
+      recast: 0.20.4
+      temp: 0.8.4
+      write-file-atomic: 2.4.3
+    dev: true
+    hasBin: true
+    peerDependencies:
+      '@babel/preset-env': ^7.1.6
+    resolution:
+      integrity: sha512-SdRK2C7jjs4k/kT2mwtO07KJN9RnjxtKn03d9JVj6c3j9WwaLcFYsICYDnLAzY0hp+wG2nxl+Cm2jWLiNVYb8g==
   /jsdom/16.5.2:
     dependencies:
       abab: 2.0.5
@@ -20272,6 +20349,17 @@ packages:
       node: '>=8.10.0'
     resolution:
       integrity: sha512-cMhu7c/8rdhkHXWsY+osBhfSy0JikwpHK/5+imo+LpeasTF8ouErHrlYkwT0++njiyuDvc7OFY5T3ukvZ8qmFQ==
+  /recast/0.20.4:
+    dependencies:
+      ast-types: 0.14.2
+      esprima: 4.0.1
+      source-map: 0.6.1
+      tslib: 2.1.0
+    dev: true
+    engines:
+      node: '>= 4'
+    resolution:
+      integrity: sha512-6qLIBGGRcwjrTZGIiBpJVC/NeuXpogXNyRQpqU1zWPUigCphvApoCs9KIwDYh1eDuJ6dAFlQoi/QUyE5KQ6RBQ==
   /rechoir/0.6.2:
     dependencies:
       resolve: 1.20.0
@@ -21832,7 +21920,6 @@ packages:
     dependencies:
       is-fullwidth-code-point: 2.0.0
       strip-ansi: 4.0.0
-    dev: true
     engines:
       node: '>=4'
     resolution:
@@ -21938,7 +22025,6 @@ packages:
   /strip-ansi/4.0.0:
     dependencies:
       ansi-regex: 3.0.0
-    dev: true
     engines:
       node: '>=4'
     resolution:
@@ -22088,6 +22174,28 @@ packages:
     dev: true
     resolution:
       integrity: sha512-CzFnRRXhzWIdItT3OmF8SQfWyahHhjq3HwcMNCNLn+N7klOOqPjMeG/4JSu77D7ypZdGvSzvkrbyeTMizz2VrA==
+  /styled-components/4.4.1:
+    dependencies:
+      '@babel/helper-module-imports': 7.13.12
+      '@babel/traverse': 7.13.13_supports-color@5.5.0
+      '@emotion/is-prop-valid': 0.8.8
+      '@emotion/unitless': 0.7.5
+      babel-plugin-styled-components: 1.12.0_styled-components@4.4.1
+      css-to-react-native: 2.3.2
+      memoize-one: 5.1.1
+      merge-anything: 2.4.4
+      prop-types: 15.7.2
+      react-is: 16.13.1
+      stylis: 3.5.4
+      stylis-rule-sheet: 0.0.10_stylis@3.5.4
+      supports-color: 5.5.0
+    dev: true
+    peerDependencies:
+      react: '>= 16.3.0'
+      react-dom: '>= 16.3.0'
+    requiresBuild: true
+    resolution:
+      integrity: sha512-RNqj14kYzw++6Sr38n7197xG33ipEOktGElty4I70IKzQF1jzaD1U4xQ+Ny/i03UUhHlC5NWEO+d8olRCDji6g==
   /styled-components/4.4.1_react-dom@17.0.2+react@17.0.2:
     dependencies:
       '@babel/helper-module-imports': 7.13.12
@@ -22461,6 +22569,14 @@ packages:
     dev: true
     resolution:
       integrity: sha512-Yy0N2OV0mosmr1SCZEm3Ezhu/oi5Dbao5RqauZu4+VI5I/XtVBHXajRk0txuqbFYtKdzzWGDZFGSif9ovVLjEA==
+  /temp/0.8.4:
+    dependencies:
+      rimraf: 2.6.3
+    dev: true
+    engines:
+      node: '>=6.0.0'
+    resolution:
+      integrity: sha512-s0ZZzd0BzYv5tLSptZooSjK8oj6C+c19p7Vqta9+6NPOf7r+fxq0cJe6/oN4LTC79sy5NY8ucOJNgwsKCSbfqg==
   /term-size/1.2.0:
     dependencies:
       execa: 0.7.0
@@ -24222,7 +24338,7 @@ packages:
       integrity: sha512-BLI3Tl1TW3Pvl70l3yq3Y64i+awpwXqsGBYWkkqMtnbXgrMD+yj7rhW0kuEDxzJaYXGjEW5ogapKNMEKNMjibA==
   /wide-align/1.1.3:
     dependencies:
-      string-width: 1.0.2
+      string-width: 2.1.1
     resolution:
       integrity: sha512-QGkOQc8XL6Bt5PwnsExKBPuMKBxnGxWWW3fU55Xt4feHozMUhdUMaBCk290qpm/wG5u/RSKzwdAC4i51YigihA==
   /widest-line/2.0.1:
@@ -24586,3 +24702,4 @@ packages:
     dev: true
     resolution:
       integrity: sha512-V50KMwwzqJV0NpZIZFwfOD5/lyny3WlSzRiXgA0G7VUnRlqttta1L6UQIHzd6EuBY/cHGfwTIck7w1yH6Q5zUw==
+registry: ''
